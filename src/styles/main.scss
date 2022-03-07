@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green: #27300f;
+$orange: #d26a22;
+$dark-orange: #cf5c0d;
+$wh: #fff;
+
+$font-jost: 'Jost', sans-serif;
+$font-cormorant: 'Cormorant', serif;
+
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    font-size: 1.6rem;
+    font-family: $font-jost;
+    color: $green;
+}
+
+.header
+{
+    max-width: 1440px;
+    margin: 0 auto 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 15px 0 15px;
+    gap: 5%;
+    &__nav
+    {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 4.8rem;
+    }
+    &__link
+    {
+        color: $green;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover
+        {
+            color: $orange;
+        }
+    }
+    &__tel
+    {
+        color: $green;
+        text-decoration: none;
+        flex-basis: 200px;
+        text-align: right;
+        transition: 0.3s;
+        font-weight: 500;
+        &:hover
+        {
+            color: $orange;
+        }
+    }
+    &__cart
+    {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.7rem 1.5rem;
+        background-image: url(../img/cart.svg);
+        background-color: $orange;
+        position: relative;
+        border: 1px solid $orange;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover
+        {
+            background-color: $green;
+            border: 1px solid $green;
+        }
+    }
+    &__counter
+    {
+        font-size: .8rem;
+        color: $wh;
+        position: absolute;
+        right: .6rem;
+        top: .6rem;
+    }
+}
+.logo
+{
+    display: block;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12rem;
+    height: 3.2rem;
+}
+.container
+{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main
+{
+    background-image: url(../img/main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 187px;
+    z-index: 0;
+    &__item
+    {
+        margin-left: 12.2rem;
+        max-width: 378px;
+        margin-top: 6.1rem;
+    }
+    &__link
+    {
+        margin-top: 5.5rem;
+    }
+    &__flex
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__cover
+    {
+        flex-basis: 758px;
+        height: 758px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__line
+    {
+        width: 656px;
+        height: 656px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image
+    {
+        width: 92%;
+        border-radius: 100%;
+        animation: shadow 5s liner infinite;
+    }
+    &__text 
+    {
+        padding-top: 3rem;
+    }
+    &__btn
+    {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        color: $green;
+        text-align: left;
+        transition: 0.3s;
+        &:hover
+        {
+             &::before
+            {
+                background-color: $orange;
+                box-shadow: 0 0 0 4px $wh, 0 0 0 5px $orange;
+            }
+        }
+        &::before
+        {
+            content: '';
+            background-color: $green;
+            width: 11px;
+            height: 11px;
+            border-radius: 100%;
+            box-shadow: 0 0 0 4px $wh, 0 0 0 5px $green;
+            position: absolute;
+        }
+        &_1
+        {
+            top: 64px;
+            left: 67px;
+            &::before
+            {
+               bottom: 9;
+               right: -35px;
+            }
+        }
+        &_2
+        {
+            top: 194px;
+            right: 2px;
+            &::before
+            {
+                top: 17px;
+                left: -26px;
+            }
+        }
+        &_3
+        {
+            bottom: -42px;
+            right: 244px;
+            &::before
+            {
+                top: -24px;
+                left: 13px;
+            }
+        }
+    }
+    &__food
+    {
+        display: block;
+        color: rgba($color: $green, $alpha: 0.8);
+    }
+    &__tomato
+    {
+        position: absolute;
+        top: 839px;
+        right: 151px;
+        width: 11rem;
+        z-index: -1;
+    }
+    &__cucumber
+    {
+        position: absolute;
+        top: 0;
+        left: 719px;
+        width: 8.5rem;
+        z-index: -1;
+    }
+    &__pepper
+    {
+        position: absolute;
+        top: 396px;
+        left: 69px;
+        width: 8.6rem;
+        z-index: -1;
+    }
+    &__beans
+    {
+        position: absolute;
+        top: 796px;
+        left: 0;
+        width: 10.5rem;
+        z-index: -1;
+    }
+    &__avocado
+    {
+        position: absolute;
+        top: 45px;
+        right: 30px;
+        width: 18rem;
+        z-index: -1;
+    }
+   
+}
+.title
+{
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 1;
+    margin: 0;
+    &__span
+    {
+        font-style: italic;
+    }
+    &_block
+    {
+        .title__span
+        {
+            display: block;
+        }
+    }
+}
+.description
+{
+    margin: 0;
+    line-height: 1.45;
+    &_size-s
+    {
+        font-size: 1.8rem;
+    }
+    &_size-m
+    {
+        font-size: 2.4rem;
+    }
+}
+.link
+{
+    color: $wh;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+    padding: 2.4rem 4.3rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 38px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover
+    {
+        background-color: $dark-orange;
+    }
+}
+.offer
+{
+    background-image: url(../img/offer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 1.7rem;
+    padding-bottom: 13.1rem;
+    &__text
+    {
+        margin-top: 6rem;
+        max-width: 700px;
+    }
+    &__slider
+    {
+        overflow: hidden;
+        padding-top: 9.4rem;
+    }
+}
+.swiper
+{
+    overflow: initial;
+    &-slide
+    {
+        border: 1px solid $green;
+    }
+    &-pagination
+    {
+        display: none;
+    }
+    &-button-next, &-button-prev
+    {
+        top: -60px;
+        transition: 0.3s;
+        
+        &:hover {
+
+            &::after {
+                color: rgba($green, 1);         
+            }
+        }
+
+        &::after {
+            color: rgba($green, 0.4);
+            font-size: 20px;
+        }
+    } 
+    &-button-next {
+        right: -8px;
+    }
+
+    &-button-prev {
+        left: initial;
+        right: 72px;
+    }
+}
