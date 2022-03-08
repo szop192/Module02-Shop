@@ -329,7 +329,7 @@ body
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 1.7rem;
-    padding-bottom: 13.1rem;
+    padding-bottom: 12.8rem;
     &__text
     {
         margin-top: 6rem;
@@ -346,7 +346,100 @@ body
     overflow: initial;
     &-slide
     {
-        border: 1px solid $green;
+        border: 1px solid rgba($color: $green, $alpha: 0.4);
+        border-radius: 20px;
+        padding: 4rem 3.7rem;
+        box-sizing: border-box;
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.3s;
+        position: relative;
+        z-index: 0;
+        &:hover
+        {
+            box-shadow: 0 0 0 2px rgba($color: $green, $alpha: 0.4) inset;
+            .swiper-slide__hover
+            {
+                height: 233px;
+                opacity: 1;
+            }
+            &::after
+            {
+                content: '';
+                background-color: rgba($wh, .55);
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                border-radius: 20px;
+                z-index: -1;
+            }
+        }
+        &_milk
+        {
+            background-image: url(../img/milk.png);
+        }
+        &_pasta
+        {
+            background-image: url(../img/pasta.png);
+        }
+        &_meat
+        {
+            background-image: url(../img/meat.png);
+        }
+        &__title
+        {
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            color: $green;
+            margin-bottom: 0;
+        }
+        &__hover
+        {
+            height: 0;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        &__text
+        {
+            color:rgba($green, 0.7);
+            line-height: 1.5;
+            margin-top: 2.5rem;
+            margin-bottom: 3.4rem;
+            max-width: 263px;
+        }
+        &__link
+        {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $green;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            letter-spacing: 0.1rem;
+            transition: 0.2s;
+            opacity: 0.7;
+            &::before
+            {
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-image: url(../img/plus.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &:hover
+            {
+                opacity: 1;
+            }
+        }
     }
     &-pagination
     {
@@ -356,17 +449,18 @@ body
     {
         top: -60px;
         transition: 0.3s;
-        
-        &:hover {
-
-            &::after {
-                color: rgba($green, 1);         
-            }
-        }
-
-        &::after {
+        &::after 
+        {
             color: rgba($green, 0.4);
             font-size: 20px;
+        }
+
+        &:hover 
+        {
+            &::after 
+            {
+                color: rgba($green, 1);         
+            }
         }
     } 
     &-button-next {
@@ -376,5 +470,56 @@ body
     &-button-prev {
         left: initial;
         right: 72px;
+    }
+}
+.about
+{
+    padding-top: 37px;
+    padding-bottom: 154px;
+    &__box
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7.8rem;
+    }
+    &__text
+    {
+        margin-left: 11.5rem;
+        flex-basis: 615px;
+    }
+    &__list
+    {
+        margin: 0;
+        padding-left: 0;
+        display: flex;
+        gap: 9rem;
+        font-family: $font-cormorant;
+        font-style: italic;
+        list-style-type: none;
+        font-size: 3rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: '';
+            width: 84px;
+            height: 84px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba($green, 0.4);
+            border-radius: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../img/fruit.png);
+                background-size: 44px 41px;
+            }
+        }
     }
 }
