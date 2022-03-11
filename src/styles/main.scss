@@ -29,6 +29,11 @@ body
     align-items: center;
     padding: 4rem 15px 0 15px;
     gap: 5%;
+    &__navigation 
+    {
+        flex-grow: 1;
+        margin-left: 4.5rem;
+    }
     &__nav
     {
         display: flex;
@@ -195,31 +200,37 @@ body
         }
         &_1
         {
-            top: 64px;
+            top: 41px;
             left: 67px;
+            line-height: 150%;
+            transition: 0.3s;
             &::before
             {
-               bottom: 9;
+               bottom: 12px;
                right: -35px;
             }
         }
         &_2
         {
-            top: 194px;
+            top: 188px;
             right: 2px;
+            line-height: 150%;
+            transition: 0.3s;
             &::before
             {
                 top: 17px;
-                left: -26px;
+                left: -25px;
             }
         }
         &_3
         {
-            bottom: -42px;
+            bottom: -46px;
             right: 244px;
+            line-height: 150%;
+            transition: 0.3s;
             &::before
             {
-                top: -24px;
+                top: -15px;
                 left: 13px;
             }
         }
@@ -316,10 +327,21 @@ body
     display: inline-block;
     border: none;
     cursor: pointer;
+    text-align: center;
     transition: 0.3s;
     &:hover
     {
         background-color: $dark-orange;
+    }
+    &_min
+    {
+        font-size: 1.4rem;
+        padding: 1.5rem 3.4rem;
+        box-shadow: 0px 1rem 1.1rem 0.17rem rgba(207, 92, 13, 0.15);
+    }
+    &_max 
+    {
+        padding: 1.7rem 4.8rem;
     }
 }
 .offer
@@ -335,11 +357,11 @@ body
         margin-top: 6rem;
         max-width: 700px;
     }
-    &__slider
-    {
-        overflow: hidden;
-        padding-top: 9.4rem;
-    }
+}
+.slider
+{
+    overflow: hidden;
+    padding-top: 9.4rem;
 }
 .swiper
 {
@@ -348,27 +370,30 @@ body
     {
         border: 1px solid rgba($color: $green, $alpha: 0.4);
         border-radius: 20px;
-        padding: 4rem 3.7rem;
+        padding: 3rem 3.7rem 3.8rem;
         box-sizing: border-box;
-        height: 520px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         background-repeat: no-repeat;
         background-size: cover;
         transition: 0.3s;
         position: relative;
         z-index: 0;
-        &:hover
+        &_white
         {
-            box-shadow: 0 0 0 2px rgba($color: $green, $alpha: 0.4) inset;
-            .swiper-slide__hover
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-size: contain;
+            padding: 4rem 3.7rem;
+            &:hover
             {
+                .swiper-slide__hover
+                {
                 height: 233px;
                 opacity: 1;
-            }
-            &::after
-            {
+                }
+                &::after
+                {
                 content: '';
                 background-color: rgba($wh, .55);
                 width: calc(100% - 4px);
@@ -378,7 +403,12 @@ body
                 left: 2px;
                 border-radius: 20px;
                 z-index: -1;
+                }
             }
+        }
+        &:hover
+        {
+            box-shadow: 0 0 0 2px rgba($color: $green, $alpha: 0.4) inset;  
         }
         &_milk
         {
@@ -396,7 +426,6 @@ body
         {
             font-family: $font-cormorant;
             font-size: 3rem;
-            color: $green;
             margin-bottom: 0;
         }
         &__hover
@@ -440,6 +469,48 @@ body
                 opacity: 1;
             }
         }
+        &__cover
+        {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 322px;
+            text-align: center;
+        }
+        &__image
+        {
+            height: 100%;
+            object-fit: contain;
+            max-width: 351px;
+            width: 100%;
+        }
+        &__footer
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5%;
+        }
+        &__description
+        {
+            color:rgba($green, 0.7);
+            line-height: 1.5;
+            margin-top: 2rem;
+            margin-bottom: 0rem;
+            max-width: 300px;
+            font-size: 1.8rem;
+            min-height: 55px;
+        }
+        &__price
+        {
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+        }
+    }
+    &-slide-trends
+    {
+        height: 688px;
+        width: 469px;
     }
     &-pagination
     {
@@ -472,6 +543,53 @@ body
         right: 72px;
     }
 }
+.counter
+{
+    display: flex;
+    &__btn
+    {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        border: 1px solid $green;
+        border-radius: 100%;
+        background-color: transparent;
+        padding: 0;
+        background-position: center center;
+        &_min
+        {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__minus
+    {
+        pointer-events: none;
+        background-image: url(../img/minus.png);
+        background-size: 14px 2px;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+    &__plus
+    {
+        background-image: url(../img/plus.png);
+        background-size: 14px 14px;
+        background-repeat: no-repeat;
+        margin-right: 4rem;
+    }
+    &__input
+    {
+        text-align: center;
+        border: none;
+        font-size: 2.4rem;
+        width: 46px;
+        padding: 0;
+        &_min 
+        {
+            width: 33px;
+        }
+    }
+}
 .about
 {
     padding-top: 37px;
@@ -481,11 +599,11 @@ body
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 7.8rem;
+        margin-top: 7rem;
     }
     &__text
     {
-        margin-left: 11.5rem;
+        margin-left: 12rem;
         flex-basis: 615px;
     }
     &__list
@@ -532,6 +650,392 @@ body
                 background-image: url(../img/good.png);
                 background-size: 45px 39px;
             }
+        }
+    }
+}
+.trends
+{
+    padding-top: 30px;
+    padding-bottom: 135px;
+    &__text
+    {
+        margin-top:4rem;
+        letter-spacing: 1px;
+    }
+}
+.catalog
+{
+    padding-top: 5.9rem;
+    padding-bottom: 13.5rem;
+    &__text
+    {
+        margin-top: 3.89rem;
+        letter-spacing: 1px;
+    }
+    &__nav
+    {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+        padding-left: 0;
+        align-items: center;
+        margin: 8.5rem 0 5rem 0;
+    }
+    &__item
+    {
+        flex-basis: 230px;
+        text-align: center;
+    }
+    &__link
+    {
+        text-decoration: none;
+        color: rgba($color: $green, $alpha: 0.5);
+        background-color: transparent;
+        border: 1px solid rgba($color: $green, $alpha: 0.5);
+        padding: 2.4rem 0;
+        border-radius: 40px;
+        display: block;
+        transition: 0.3s;
+        font-size: 1.8rem;
+        &:hover
+        {
+            color: $orange;
+            border: 1px solid $orange;
+        }
+    }
+    &__btn 
+    {
+        cursor: pointer;
+        margin: 6rem auto 0;
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        color: $green;
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        transition: 0.3s;
+
+        &::before 
+        {
+            content: '';
+            display: block;
+            background-image: url(../img/refresh.svg);
+            width: 25px;
+            height: 25px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &:hover
+        {
+            opacity: 1;
+        }
+    }
+}
+.catalog-grid
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    &__item
+    {
+        border: 1px solid rgba($color: $green, $alpha: 0.4);
+        padding: 2.9rem 0.8rem 3.8rem;
+        box-sizing: border-box;
+        border-radius: 20px;
+        transition: 0.3s;
+        &:hover 
+        {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+    }
+    &__cover 
+    {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 204px;
+        text-align: center;
+    }
+    &__image 
+    {
+        width: 100%;
+        max-width: 351px;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__title 
+    {
+        font-family: $font-cormorant;
+        font-size: 3rem;
+        margin-top: 1.7rem;
+        margin-bottom: 0;
+    }
+    &__description 
+    {
+        font-size: 1.6rem;
+        color: rgba($green, 0.7);
+        margin-top: 1.8rem;
+        margin-bottom: 0;
+        min-height: 61px;
+        max-width: 250px;
+        line-height: 150%;
+    }
+    &__price 
+    {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+    &__footer 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.delivery
+{
+    padding-top: 0.4rem;
+    padding-bottom: 13.7rem;
+    &-box
+    {
+        display: flex;
+        gap: 12%;
+        align-items: center;
+        margin-top: 5.4rem;
+        margin-left: 12.5rem;
+        line-height: 150%;
+        &__text
+        {
+            font-size: 1.8rem;
+            max-width: 580px;
+            &-s
+            {
+                max-width: 480px;
+            }
+        }
+        &__span
+        {
+            color: $orange;
+        }
+        &__link
+        {
+            color: $green;
+            position: relative;
+            text-decoration: none;
+            transition: 0.3s;
+            &:hover
+            {
+                color: $orange;
+                &::after 
+                {
+                    background-color: $orange;
+                }
+            }
+            &::after 
+            {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #858881;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 3px;
+            }
+        }
+        &__check
+        {
+            margin-bottom: 1rem;
+        }
+        &__right
+        {
+            margin-right: 12rem;
+        }
+        &__ul
+        {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            margin-top: 5rem;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        &__item
+        {
+            flex-basis: 230px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            opacity: .4;
+            height: 32px;
+            transform: scale(1);
+            transition: .3s;
+                &-card
+            {
+                background-image: url(../img/card.png);
+                max-width: 53px;
+            }
+            &-visa
+            {
+                background-image: url(../img/visa.png);
+                max-width: 74px;
+            }
+            &-pay
+            {
+                background-image: url(../img/paypal.png);
+                max-width: 87px;
+            }
+            &:hover
+            {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    
+    
+    }
+}
+.contact
+{    
+    padding-bottom: 16.1rem;
+    &-box
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text
+        {
+            max-width: 400px;
+            flex-grow: 1;
+            margin-top: 6.2rem;
+            margin-left: 12.3rem;
+            line-height: 175%;
+            letter-spacing: 0.9px;
+        }
+        &__form
+        {
+            flex-basis: 589px;
+        }
+        &__list 
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+            padding-left: 0;
+            margin-top: 5.8rem;
+            list-style: none;
+        }
+        &__tel, &__mail 
+        {
+            text-decoration: none;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: $green;
+            display: flex;
+            align-items: center;
+            gap: 3.4rem;
+            letter-spacing: 0;
+            &::before 
+            {
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &:hover 
+            {
+                color: $orange;
+            }
+        }
+        
+        &__tel 
+        {
+            &::before 
+            {
+                background-image: url(../img/phone.svg);
+                background-size: 29px 30px;
+            }
+        }
+        
+        &__mail 
+        {
+            &::before 
+            {
+                background-image: url(../img/mail.svg);
+            }
+        }
+    }
+}
+.card 
+{
+    border: 2px solid rgba($color: $green, $alpha: 0.4);
+    padding: 3.2rem 5.8rem 8rem;
+    border-radius: 20px;
+    &__title
+    {
+        font-size: 3rem;
+        font-family: $font-cormorant;
+        padding: 0;
+        margin-top: 0;
+    }
+    &__label
+    {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: .6rem;
+    }
+    &__input
+    {
+        border: 1px solid rgba($color: $green, $alpha: 0.4);
+        padding: 2.2rem 3rem;
+        margin-bottom: 2.8rem;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 20px;
+        transition: 0.3s;
+        &:focus
+        {
+            border: 1px solid rgba($color: $green, $alpha: 1); 
+            outline: none;
+        }
+        &:invalid
+        {
+            border: red;
+        }
+    }
+    &__check
+    {
+        font-size: 1.2rem;
+        color: rgba($color: $green, $alpha: 0.6);
+        line-height: 1.5;
+        max-width: 360px;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+    }
+    &__link
+    {
+        margin-top: 1.2rem;
+    }
+    &__docs
+    {
+        text-decoration: none;
+        border-bottom: 1px solid #ecedec;
+        color: rgba($green, 0.6);
+        transition: 0.3s;
+
+        &:hover {
+            color: rgba($green, 1);
+            border-bottom: 1px solid $green;
         }
     }
 }
