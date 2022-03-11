@@ -18,6 +18,10 @@ body
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .header
@@ -60,6 +64,7 @@ body
         text-align: right;
         transition: 0.3s;
         font-weight: 500;
+        letter-spacing: 0.13rem;
         &:hover
         {
             color: $orange;
@@ -113,11 +118,6 @@ body
 }
 .main
 {
-    background-image: url(../img/main.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
     padding-bottom: 187px;
     z-index: 0;
     &__item
@@ -336,8 +336,12 @@ body
     &_min
     {
         font-size: 1.4rem;
-        padding: 1.5rem 3.4rem;
+        padding: 2rem 3.4rem;
         box-shadow: 0px 1rem 1.1rem 0.17rem rgba(207, 92, 13, 0.15);
+        flex-grow: 1;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
     }
     &_max 
     {
@@ -346,10 +350,6 @@ body
 }
 .offer
 {
-    background-image: url(../img/offer.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding-top: 1.7rem;
     padding-bottom: 12.8rem;
     &__text
@@ -556,12 +556,14 @@ body
         background-color: transparent;
         padding: 0;
         background-position: center center;
+    
         &_min
         {
             width: 40px;
             height: 40px;
         }
     }
+    
     &__minus
     {
         pointer-events: none;
@@ -575,7 +577,6 @@ body
         background-image: url(../img/plus.png);
         background-size: 14px 14px;
         background-repeat: no-repeat;
-        margin-right: 4rem;
     }
     &__input
     {
@@ -588,6 +589,12 @@ body
         {
             width: 33px;
         }
+    }
+    & + .link {
+        flex-grow: 1;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 .about
@@ -742,7 +749,7 @@ body
     &__item
     {
         border: 1px solid rgba($color: $green, $alpha: 0.4);
-        padding: 2.9rem 0.8rem 3.8rem;
+        padding: 2.7rem 3rem 3.8rem;
         box-sizing: border-box;
         border-radius: 20px;
         transition: 0.3s;
@@ -762,7 +769,7 @@ body
     &__image 
     {
         width: 100%;
-        max-width: 351px;
+        max-width: 200px;
         height: 100%;
         object-fit: contain;
     }
@@ -794,6 +801,7 @@ body
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 5%;
     }
 }
 .delivery
