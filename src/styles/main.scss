@@ -108,6 +108,12 @@ body
     background-size: contain;
     width: 12rem;
     height: 3.2rem;
+    &-footer 
+    {
+        height: 4.8rem;
+        margin-top: 7px;
+        flex-basis: 18rem;
+    }
 }
 .container
 {
@@ -985,7 +991,7 @@ body
 .card 
 {
     border: 2px solid rgba($color: $green, $alpha: 0.4);
-    padding: 3.2rem 5.8rem 8rem;
+    padding: 3.2rem 5.8rem 4rem;
     border-radius: 20px;
     &__title
     {
@@ -1044,6 +1050,217 @@ body
         &:hover {
             color: rgba($green, 1);
             border-bottom: 1px solid $green;
+        }
+    }
+}
+.footer
+{
+    border-top: 1px solid rgba($color: $green, $alpha: 0.2);
+    &__box
+    {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin-top: 79px;
+        margin-bottom: 21px;
+    }
+    &__info 
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 66.5%;
+    }
+    &__list 
+    {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        text-align: left;
+    }
+    &__item 
+    {
+        margin-bottom: 2.5rem;
+        &:last-child 
+        {
+            margin-bottom: 0;
+        }
+    }
+    &__link 
+    {
+        color: $green;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover 
+        {
+            color: $orange;
+        }
+    }
+    &__contact 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 220px;
+    }
+    &__tel 
+    {
+        font-size: 2.6rem;
+        color: $green;
+        margin-bottom: 35px;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover 
+        {
+            color: $orange;
+        }
+    }
+    &__mail 
+    {
+        font-size: 18px;
+        color: $green;
+        margin-bottom: 13px;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover 
+        {
+            color: $orange;
+        }
+    }
+    &-social 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        &__vk 
+        {
+            display: flex;
+            opacity: 0.9;
+            transition: 0.3s;
+
+            &::before 
+            {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background-image: url(../img/vk.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 25px;
+                border: 1px solid rgba($green, 0.4);
+                border-radius: 100%;
+                opacity: 0.8;
+                transition: 0.3s;
+            }
+
+            &:hover 
+            {
+                opacity: 1;
+                transition: 0.3s;
+
+                &::before 
+                {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__inst 
+        {
+            display: flex;
+            opacity: 0.8;
+            transition: 0.3s;
+
+            &::before 
+            {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background-image: url(../img/instagram.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 20px;
+                border: 1px solid rgba($green, 0.4);
+                border-radius: 100%;
+                transition: 0.3s;
+            }
+
+            &:hover 
+            {
+                opacity: 1;
+                transition: 0.3s;
+
+                &::before 
+                {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__fb 
+        {
+            display: flex;
+            opacity: 0.8;
+            transition: 0.3s;
+
+            &::before 
+            {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background-image: url(../img/facebook.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 20px;
+                border: 1px solid rgba($green, 0.4);
+                border-radius: 100%;
+                transition: 0.3s;
+            }
+
+            &:hover 
+            {
+                opacity: 1;
+                transition: 0.3s;
+
+                &::before 
+                {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__text 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.6rem;
+    }
+    &__copy 
+    {
+        opacity: 0.6;
+    }
+
+   
+    &__author-text 
+    {
+        opacity: 0.6;
+    }
+
+    &__author-link 
+    {
+        color: $green;
+        text-decoration: none;
+        opacity: 0.6;
+        transition: 0.3s;
+
+        &:hover 
+        {
+            opacity: 1;
         }
     }
 }
