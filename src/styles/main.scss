@@ -819,7 +819,7 @@ body
 .delivery
 {
     padding-top: 0.4rem;
-    padding-bottom: 13.7rem;
+    padding-bottom: 21.7rem;
     &-box
     {
         display: flex;
@@ -1062,6 +1062,7 @@ body
 .footer
 {
     border-top: 1px solid rgba($color: $green, $alpha: 0.2);
+    padding-bottom: 6rem;
     &__box
     {
         display: flex;
@@ -1086,6 +1087,7 @@ body
     &__item 
     {
         margin-bottom: 2.5rem;
+        font-size: 1.8rem;
         &:last-child 
         {
             margin-bottom: 0;
