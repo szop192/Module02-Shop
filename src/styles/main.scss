@@ -170,7 +170,7 @@ body
     {
         width: 92%;
         border-radius: 100%;
-        animation: shadow 5s liner infinite;
+        animation: shadow 10s linear infinite;
     }
     &__text 
     {
@@ -203,6 +203,7 @@ body
             border-radius: 100%;
             box-shadow: 0 0 0 4px $wh, 0 0 0 5px $green;
             position: absolute;
+            transition: 0.3s;
         }
         &_1
         {
@@ -736,14 +737,19 @@ body
             content: '';
             display: block;
             background-image: url(../img/refresh.svg);
-            width: 25px;
-            height: 25px;
-            background-size: cover;
-            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat; 
+            transition: 0.3s;
         }
         &:hover
         {
             opacity: 1;
+            &::before
+            {
+                animation: spin 0.5s linear 1;
+            }
         }
     }
 }
@@ -1263,5 +1269,36 @@ body
         {
             opacity: 1;
         }
+    }
+}
+@keyframes shadow
+{
+    0%
+    {
+        box-shadow: 5px 5px 15px 0 rgba($color: $green, $alpha: 0.5);
+    }
+    50%
+    {
+        box-shadow: 20px 20px 33px 0px rgba($color: $green, $alpha: .5);
+    }
+    100%
+    {
+        box-shadow: 5px 5px 15px 0 rgba($color: $green, $alpha: 0.5);
+    
+    }
+}
+@keyframes spin
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(180deg);
+    }
+    0%
+    {
+        transform: rotate(360deg);
     }
 }
