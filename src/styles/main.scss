@@ -1096,6 +1096,7 @@ body
 {
     background: $orange;
     border: 1px solid $orange;
+    animation: pulse  3s linear infinite;;
 }
 .swiper-pagination-bullet
 {
@@ -2177,5 +2178,20 @@ body
     0%
     {
         transform: rotate(360deg);
+    }
+}
+@keyframes pulse
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0.6;
+    }
+    100%
+    {
+        opacity: 1;
     }
 }
