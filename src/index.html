@@ -13,22 +13,22 @@
             <nav class="header__navigation">
                 <ul class="header__nav">
                     <li class="header__item">
-                        <a href="#" class="header__link">Наша продукция</a>
+                        <a href="#offer" class="header__link scroll">Наша продукция</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">О компании</a>
+                        <a href="#about" class="header__link scroll">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Новинки</a>
+                        <a href="#trends" class="header__link scroll">Новинки</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Каталог</a>
+                        <a href="#catalog" class="header__link scroll">Каталог</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Доставка</a>
+                        <a href="#delivery" class="header__link scroll">Доставка</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Контакты</a>
+                        <a href="#contact" class="header__link scroll">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -73,10 +73,10 @@
         <img src="img/tomato.png" class="main__tomato" alt="">
         <img src="img/beans.png" class="main__beans" alt="">
         <img src="img/cucumber.png" class="main__cucumber" alt="">
-        <img src="img/avocado.png" class="main__avocado" alt="">
+        <img src="img/avocadotest.png" class="main__avocado" alt="">
         <img src="img/pepper.png" class="main__pepper" alt="">
     </div>
-    <section class="offer">
+    <section class="offer" id="offer">
         <div class="container">
             <h1 class="title title_block">
                 Что мы
@@ -195,7 +195,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h1 class="title title_block">
                 В чем наша
@@ -219,7 +219,7 @@
             </div>
         </div>
     </section>
-    <section class="trends">
+    <section class="trends" id="trends">
         <div class="container">
             <h1 class="title">
                 Наши
@@ -401,7 +401,7 @@
             </div>
         </div>
     </section>
-    <main class="catalog">
+    <main class="catalog" id="catalog">
         <div class="container">
             <h1 class="title">Каталог</h1>
             <div class="catalog__text">
@@ -563,7 +563,7 @@
             <button class="catalog__btn"> Загрузить еще</button>
         </div>
     </main>
-    <section class="delivery">
+    <section class="delivery" id="delivery">
         <div class="container">
             <h1 class="title">
                 Доставка и
@@ -589,7 +589,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="contact-box">
                 <div class="contact-box__item">
@@ -629,9 +629,9 @@
                 <a href="#" class="logo logo-footer"></a>
                 <div class="footer__info">
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#">Наша продукция</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">Новинки</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">Доставка</a></li>
+                        <li class="footer__item"><a class="footer__link scroll" href="#offer">Наша продукция</a></li>
+                        <li class="footer__item"><a class="footer__link scroll" href="#trends">Новинки</a></li>
+                        <li class="footer__item"><a class="footer__link scroll" href="#delivery">Доставка</a></li>
                     </ul>
                     <ul class="footer__list">
                         <li class="footer__item">Москва, ул.&nbspЛенинградская&nbsp64</li>
@@ -661,5 +661,31 @@
             </div>
         </div>
     </footer>
+    <script>
+    const links = document.querySelectorAll(".scroll");
+
+    for (const link of links) 
+    {
+        link.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) 
+    {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+
+        document.querySelector(href).scrollIntoView({behavior: "smooth"});
+    }
+
+    function openModal() 
+    {
+        document.getElementById("modal").style.top = "0px";
+    }
+
+    function closeModal() 
+    {
+        document.getElementById("modal").style.top = "-460px";
+    }
+    </script>
 </body>
 </html>

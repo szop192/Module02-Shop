@@ -21,7 +21,6 @@ import './styles/main.scss'
     },
     modules: [Navigation, Pagination],
     breakpoints: {
-        // when window width is >= 320px
         320: {
           slidesPerView: 1,
           spaceBetween: 20,
@@ -53,4 +52,20 @@ var swiper = new Swiper(".trendsSwiper", {
         prevEl: ".swiper-button-prev",
     },
     modules: [Navigation, Pagination],
+    breakpoints:
+    {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerGroup: 1
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+        },
+        1200: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+        },
+    }
 });
