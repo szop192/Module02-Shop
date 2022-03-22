@@ -58,15 +58,15 @@
                     <div class="main__line">
                         <img class="main__image" src="img/plate.png" alt="тарелка с едой">
                     </div>
-                    <button class="main__btn main__btn_1" type="button">
+                    <a class="main__btn main__btn_1" href="#popup_avo">
                         <span class="main__food">Авокадо</span> 134 руб
-                    </button>
-                    <button class="main__btn main__btn_2" type="button">
+                    </a>
+                    <a class="main__btn main__btn_2" href = "#popup_pot">
                         <span class="main__food">Картофель</span> 134 руб
-                    </button>
-                    <button class="main__btn main__btn_3" type="button">
+                    </a>
+                    <a class="main__btn main__btn_3" href = "#popup_tom">
                         <span class="main__food">Томаты</span> 134 руб
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -687,6 +687,30 @@
         </div>
         <button class="modal__close" onclick="closeModal()"></button>
     </div>
+    <div id="popup_pot" class="popup popup-pot">
+        <a href="#" class="popup__close"></a>
+        <div class="popup__text">
+            <h1 class="popup__head">Картофель</h1>
+            <p class="popup__des">Картофель молодой, Свежий урожай, 1кг.</p>
+            <p class="popup__cost">169 руб/кг</p>
+        </div>
+    </div>
+    <div id="popup_avo" class="popup popup-avo">
+        <a href="#" class="popup__close"></a>
+        <div class="popup__text">
+            <h1 class="popup__head">Авокадо</h1>
+            <p class="popup__des">Авокадо спелый, Самое лучшее, 1кг.</p>
+            <p class="popup__cost">326 руб/кг</p>
+        </div>
+    </div>
+    <div id="popup_tom" class="popup popup-tom">
+        <a href="#" class="popup__close"></a>
+        <div class="popup__text">
+            <h1 class="popup__head">Томаты</h1>
+            <p class="popup__des">Томаты розовые, Очень мягкие, 1кг.</p>
+            <p class="popup__cost">169 руб/кг</p>
+        </div>
+    </div>
     <script>
     const links = document.querySelectorAll(".scroll");
 
@@ -711,6 +735,18 @@
     function closeModal() 
     {
         document.getElementById("modal").style.top = "-460px";
+    }
+    function closePopup() 
+    {
+        document.getElementById("popup_pot").style.top = "-2000px";
+    }
+    function closePopup() 
+    {
+        document.getElementById("popup_avo").style.top = "-2000px";
+    }
+    function closePopup() 
+    {
+        document.getElementById("popup_tom").style.top = "-2000px";
     }
     </script>
 </body>
