@@ -35,7 +35,7 @@
             <a href="tel:+79453425555" class="header__tel">+7 945 342 55 55</a>
             <div class="header__buttons">
                 <a href="tel:+79453425555" class="header__phone"></a>
-                <button class="header__menu"></button>
+                <button class="header__menu" onclick="openModal()"></button>
                 <button href="#" class="header__cart">
                     <span class="header__counter">0</span>
                 </button>
@@ -661,6 +661,32 @@
             </div>
         </div>
     </footer>
+    <div id="modal" class="modal">
+        <a href="#" class="logo"></a>
+        <div class="header__navigation modal__navigation">
+            <ul class="header__nav modal__nav">
+                <li class="header__item modal__item">
+                    <a href="#offer" class="header__link modal__link scroll">Наша продукция</a>
+                </li>
+                <li class="header__item modal__item">
+                    <a href="#about" class="header__link modal__link scroll">О компании</a>
+                </li>
+                <li class="header__item modal__item">
+                    <a href="#trends" class="header__link modal__link scroll">Новинки</a>
+                </li>
+                <li class="header__item modal__item">
+                    <a href="#catalog" class="header__link modal__link scroll">Каталог</a>
+                </li>
+                <li class="header__item modal__item">
+                    <a href="#delivery" class="header__link modal__link scroll">Доставка</a>
+                </li>
+                <li class="header__item modal__item">
+                    <a href="#contact" class="header__link modal__link scroll">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <button class="modal__close" onclick="closeModal()"></button>
+    </div>
     <script>
     const links = document.querySelectorAll(".scroll");
 
