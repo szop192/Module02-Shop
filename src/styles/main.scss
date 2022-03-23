@@ -2216,7 +2216,7 @@ body
     z-index: 1;
     background-color: $wh;
     border-radius: 20px;
-    box-shadow: 0 0 25px 1px rgba($color: $green, $alpha: 0.4);
+    box-shadow: 0 0 25px 1px rgba($color: $green, $alpha: 0.2);
     &:target
     {
         display: block;
@@ -2224,27 +2224,33 @@ body
     &-pot
     {
         top: 374px;
-        right: 46px;
+        right: 203px;
+        @media(max-width: $r_desk_full_1750)
+        {
+            right: 40px;
+        }
         @media(max-width: $r_desk_1350)
         {
-            top:296px
+            top:296px;
+            right: 8px;
         }
         @media(max-width: $r_desk_hd)
         {
-            top:248px
+            top:248px;
         }
     }
     &-avo
     {
         top: 230px;
-        left: 783px;
+        left: 937px;
         @media(max-width: $r_desk_full_1750)
         {
             left: 746px;
         }
         @media(max-width: $r_desk_1350)
         {
-            top:206px
+            top:206px;
+            left: 640px;
         }
         @media(max-width: $r_desk_hd)
         {
@@ -2254,8 +2260,8 @@ body
     }
     &-tom
     {
-        top: 741px;
-        right: 90px;
+        top: 736px;
+        right: 377px;
         @media(max-width: $r_desk_full_1750)
         {
             right: 190px;
@@ -2266,7 +2272,7 @@ body
         }
         @media(max-width: $r_desk_hd)
         {
-            top:604px;
+            top:590px;
         }
     }
     &__text
