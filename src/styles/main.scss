@@ -2162,12 +2162,12 @@ body
     transition: 0.5s;
     padding: 30px 10px 20px 10px;
     box-sizing: border-box;
-    height: 266px;
+    height: 344px;
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
     @media (max-width: $r_mob_500) 
     {
-        height: 218px;
+        height: 272px;
     }
     &__nav
     {
@@ -2183,7 +2183,11 @@ body
     &__item
     {
         border-bottom: 1px solid rgba($color: $green, $alpha: 0.7);
-        padding-top: 1rem;
+        padding-top: 1.5rem;
+    }
+    &__link
+    {
+        font-size: 2.3rem;
     }
     &__close 
     {
