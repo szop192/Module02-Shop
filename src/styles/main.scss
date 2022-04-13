@@ -78,6 +78,10 @@ body
         margin: 0;
         padding-left: 0;
         gap: 4.8rem;
+        @media(max-width: $r_desk_1350)
+        {
+            gap: 3.8rem;
+        }
         @media(max-width: $r_desk_hd)
         {
             gap: 2.5rem;
