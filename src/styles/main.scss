@@ -1262,6 +1262,10 @@ body
         {
             gap: 4rem;
         }
+        @media (max-width: $r_mob_360) 
+        {
+            gap: 1rem;
+        }
     }
     &__item {
         display: flex;
